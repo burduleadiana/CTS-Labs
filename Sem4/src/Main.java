@@ -9,5 +9,10 @@ public class Main {
         Pizza pepperoniPizza=PizzaFactory.createPizza("Pepperoni");
 
         pepperoniPizza.typePizza();
+
+        Pizza veganPizza=PizzaFactory.createPizza("Vegan");
+
+        veganPizza.typePizza();
+
     }
 }

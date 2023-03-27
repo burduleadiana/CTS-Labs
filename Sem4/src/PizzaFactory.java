@@ -5,6 +5,8 @@ public class PizzaFactory {
         }
         else if(type.equals("Pepperoni")){
             return new PepperoniPizza();
+        } else if(type.equals("Vegan")){
+            return new VeganPizza();
         }
         return null;
     }
