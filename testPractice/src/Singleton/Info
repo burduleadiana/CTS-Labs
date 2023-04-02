@@ -1,0 +1,16 @@
+Design pattern-ul Singleton este utilizat pentru crearea unei singure instante
+
+--Prin Singleton ne dorim sa gestionam o resursa/un eveniment in mod centralizat
+--O instanta poate fi creata o singura data si poate fi referita de mai multe ori
+
+
+---------------------Componente DP Singleton--------------------------------
+ 1. un constructor privat apelabil doar in clasa
+ 2. private static Singleton instance - atribut static privat ce tipul clasei ce reprezinta instanta unica
+ 3. metoda publica getInstance() - metoda publica ce da acces la instanta unica
+
+ --------------------Cuvinte cheie------------------------------------------
+
+ 1. gestiune unica
+ 2. gestiune centralizata
+
