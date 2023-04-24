@@ -10,7 +10,36 @@ public class Calculator {
      * @return Returneaza rezultatul calculat.
      * @throws IOException Arunca exceptie daca datele introduse nu au formatul corect.
      */
-   public static double power(double N, int P)
+    public double calculatePowXPlusPowY() throws IOException {
+        double x = readDoubleValueFromConsole("Tastati valoare pentru X:");
+        double y = readDoubleValueFromConsole("Tastati valoare pentru Y:");
+        double xToThePowerOfFive = calculatePower(x, 5);
+        double yToThePowerOfSeven = calculatePower(y, 7);
+        double result = xToThePowerOfFive + yToThePowerOfSeven;
+        return result;
+    }
+
+    private double calculatePower(double base, int exponent) {
+        return Math.pow(base, exponent);
+    }
+
+    private double readDoubleValueFromConsole(String messageToShow)
+    {
+        try
+        {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print(messageToShow);
+            return Double.parseDouble(reader.readLine());
+        }
+        catch (NumberFormatException | IOException exception)
+        {
+            System.out.println(exception.getMessage());
+            if(exception.getMessage().contains("#STOP"))
+                System.exit(-1);
+            return readDoubleValueFromConsole(messageToShow);
+        }
+    }
+  /* public static double power(double N, int P)
     {
         int pow = 1;
         for (int i = 1; i <= P; i++)
@@ -35,7 +64,7 @@ public class Calculator {
         }
 
 
-        /*double x5 = x;
+        *//*double x5 = x;
         for (int i = 1; i < 5; i++) {
             x5 *= x;
         }
@@ -43,11 +72,12 @@ public class Calculator {
         double y7 = y;
         for (int i = 1; i < 7; i++) {
             y7 *= y;
-        }*/
+        }*//*
 
         //result = power(x, 5)+power(y,7);
 
-    }
+    }*/
+
 
 
 }

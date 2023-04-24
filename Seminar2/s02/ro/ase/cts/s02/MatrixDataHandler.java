@@ -2,25 +2,31 @@ package ro.ase.cts.s02;
 
 import java.io.*;
 
+
+
+/*
 public class MatrixDataHandler {
     private int[][] matrix;
-    private int h;
-    private int w;
-    private String filename;
-    public MatrixDataHandler(int h, int w, String filename) {
-        this.h = h;
-        this.w = w;
+    private int height; //
+    private int width;
+    private String filename; //matricea initializata este scrisa in fisierul filename
+
+
+    public MatrixDataHandler(int height, int width, String filename) { //constructorul care initializeaza matricea pe baza valorilor primite pentru dimensiuni
+        this.height = height;
+        this.width = width;
         this.filename = filename;
-        matrix = new int[h][];
-        for (int i = 0; i < h; i++) {
-            matrix[i] = new int[w];
+        matrix = new int[height][];
+        for (int i = 0; i < height; i++) {
+            matrix[i] = new int[width];
         }
+
 
         try {
             FileWriter fw = new FileWriter(filename);
-            fw.write(h + " " + w + "\n");
-            for (int i = 0; i < h; i++) {
-                for (int j = 0; j < w; j++) {
+            fw.write(height + " " + width + "\n");
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
                     fw.write(matrix[i][j] + " ");
                 }
                 fw.write("\n");
@@ -31,17 +37,19 @@ public class MatrixDataHandler {
         }
     }
 
+    //metoda scrie matricea in fisier
+
     public int getValueFromPosition(String filename, int posH, int posW) {
         try {
             // !!!
             BufferedReader br = new BufferedReader(new FileReader(filename));
             String line = br.readLine();
-            h = Integer.parseInt(line.split(" ")[0]);
-            w = Integer.parseInt(line.split(" ")[1]);
+            height = Integer.parseInt(line.split(" ")[0]);
+            width = Integer.parseInt(line.split(" ")[1]);
 
-            for (int i = 0; i < h; i++) {
+            for (int i = 0; i < height; i++) {
                 line = br.readLine();
-                for (int j = 0; j < w; j++) {
+                for (int j = 0; j < width; j++) {
                     matrix[i][j] = Integer.parseInt(line.split(" ")[j]);
                 }
             }
@@ -53,26 +61,28 @@ public class MatrixDataHandler {
         }
     }
 
+
+    //functia returneaza true daca matricea s-a scris cu succes si false in caz contrar
     public void modifyValueAndUpdateFile(String filename, int posH, int posW, int val) {
         try {
             // !!!
             BufferedReader br = new BufferedReader(new FileReader(filename));
             String line = br.readLine();
-            h = Integer.parseInt(line.split(" ")[0]);
-            w = Integer.parseInt(line.split(" ")[1]);
+            height = Integer.parseInt(line.split(" ")[0]);
+            width = Integer.parseInt(line.split(" ")[1]);
 
-            for (int i = 0; i < h; i++) {
+            for (int i = 0; i < height; i++) {
                 line = br.readLine();
-                for (int j = 0; j < w; j++) {
+                for (int j = 0; j < width; j++) {
                     matrix[i][j] = Integer.parseInt(line.split(" ")[j]);
                 }
             }
             br.close();
             matrix[posH][posW] = val;
             FileWriter fw = new FileWriter("matrix.txt");
-            fw.write(h + " " + w + "\n");
-            for (int i = 0; i < h; i++) {
-                for (int j = 0; j < w; j++) {
+            fw.write(height + " " + width + "\n");
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
                     fw.write(matrix[i][j] + " ");
                 }
                 fw.write("\n");
@@ -83,6 +93,7 @@ public class MatrixDataHandler {
         }
     }
 }
+*/
 
 //tratare caz in care a fost modificat fisierul
 //separare in diferite metode(citire matrice din fisier, scriere matrice in fisier, alocare spatiu in matrice

@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Calculator calculator = new Calculator();
-        double result = calculator.Xpow5PlusYpow7();
+        double result = calculator.calculatePowXPlusPowY();
         System.out.println("Rezultatul este: " + result);
 
 
