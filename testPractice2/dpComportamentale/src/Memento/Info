@@ -1,0 +1,15 @@
+    - utilizat pentru salvarea uneo stari pentru un obiect
+    - permite salvarea si revenirea la starile salvate ori de cate ori este dorit acest luctu
+    - exemplu: commiturile pe GIT, backup
+
+    -corelatie cu Command pentru ca ambele revin la starea anterioara.
+
+
+
+    --Memento are 3 componente:
+        1. Obiectul ale carui stari le vrem (originator)
+        2. Memento  obiectul care stocheaza starea originatorului
+        3. Caretaker - obiectul care gestioneaza obiectele memento
+
+        ----Cuvinte cheie: salvare/restaurare, undo/redo
+
