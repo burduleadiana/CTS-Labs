@@ -1,0 +1,11 @@
+    --folosit atunci cand un obiect isi schimba comportamentul in functie de starea in care se afla
+
+    --de exemplu, rezervarea pentru o vacanta poate avea mai multe stari: neplatita, platita partial, platita total
+
+
+    ----Participanti:
+
+    1. State - clasa abstracta sau interfataa care defineste la nivel abstract starile obiectului
+    2. Concrete state - starile concrete in care se poate afla un obiect
+    3. Context - clasa care defineste obiectul care urmeaza sa treaca prin starile descrise
+

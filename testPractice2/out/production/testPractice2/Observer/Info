@@ -1,0 +1,12 @@
+    -- defineste o relatie 1:m
+    -- utilizat atunci cand anumite obiecte trebuie anuntate de schimbarea altor obiecte
+
+    -- exemplu de problema: atunci cand o companie doreste sa anunte diverse lucruri catre clientii fideli
+
+    ----Participanti:
+            - Observatorul: clasa abstracta sau interfata care defineste obiectele ce vor fi notificate
+            - ObservatorConcret: clasele care definesc la nivel concret observatorii sau obiectele ce vor fi notificate
+            - Observabil: clasa abstracta sau interfata care defineste la nivel abstract obiectele care gestioneaza lista de observatori
+                            si care atunci cand isi modifica starea, notifica observatorul din lista
+            - ObservabilConcret: clasa concreta care gestioneaza lista de observatori
+
