@@ -1,0 +1,5 @@
+    --asemanator cu State
+    - defineste comportamentul unei clase
+    -- defineste strategia adoptata la runtime
+
+    ----Problema: atunci cand un client face rezervarea, el alege modul de plata: cash card sau paypal
